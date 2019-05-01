@@ -197,9 +197,21 @@ input::first-letter{
     padding: 70px
 }
 
+.adminSummary .card:nth-child(1){
+    width:40%
+}
+
+.emailOnSummary{
+    font-size:80%
+}
+
 #confirmer img{
-    width: 20%;
-    height:20%
+    width: 60%;
+    height:80%
+}
+
+.card{
+    width:16.6%
 }
 
 body{}

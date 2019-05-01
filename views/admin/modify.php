@@ -40,8 +40,8 @@ if ($_POST) {
     <input hidden text='text' name="productimg" 
     <?php echo "value='$product[imageName]'";?>>
     <div class="form-group" id="setNew">
-      <label for="prodimg">Product Image</label>
-      <input disabled type="file" class="custom-file-input" id="prodimg" name="prodimg" required>
+      <label for="prodimg">Product Image</label><br>
+      <input disabled type="file" id="prodimg" name="prodimg" required>
       <div class="invalid-feedback">Please upload an image.</div>
       <p class="toggleChange" id="cancelChange">Cancel</p>
     </div>

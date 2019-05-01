@@ -22,6 +22,15 @@ foreach ($orders as $index => $order) {
     "
     
     <div id='confirmer' class='centerthings-flex'>
+    <div class='card'>
+  <div class='card-header'>
+    Order #
+  </div>
+  <div class='card-body'>
+    <br>
+    <p class='card-title'>$index</p>
+  </div>
+</div>
 <div class='card'>
   <div class='card-header'>
     Item
@@ -44,11 +53,11 @@ foreach ($orders as $index => $order) {
 
 <div class='card'>
   <div class='card-header'>
-    Price of Item
+    Price
   </div>
   <div class='card-body'>
     <br>
-    <p class='card-title'>$$product[price]</p>
+    <p class='card-title'>$$order[price]</p>
   </div>
 </div>
 
