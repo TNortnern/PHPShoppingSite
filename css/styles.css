@@ -1,0 +1,373 @@
+footer{
+    text-align: center;
+    position:fixed;
+    bottom:0;
+}
+
+.logged{
+    cursor: default;
+    color:white !important
+    
+}
+
+
+
+.springSale{
+    color:white; 
+    background-color:black; 
+    padding:10% 5%; 
+    width:80%; 
+    margin:3% 0;
+    border-radius: 20px;
+    animation: .5s ease-out 0s 1 slideInFromLeft;
+}
+
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+.clickedItem{
+    text-align: center;
+    padding:3%
+    
+}
+
+.flexThings{
+    display: flex
+}
+
+#fullProdForm button{
+    margin-top:0.2%
+}
+
+.clickedItem img{
+    width:40%;
+    height: 70vh;
+    
+}
+.clickedItem b{
+    font-size:1.8em;
+}
+
+#clickedPrice{
+    font-size:1.5em; 
+    
+}
+
+.discountprice{
+    margin-left:4.7%;
+}
+
+.close{
+    color:red;
+    opacity:1;
+    font-size:2em;
+    padding:5px;
+    border-radius:5px;
+    position: absolute;
+    right:1.5%;
+    cursor: pointer;
+    text-decoration: none;
+    top:1%
+}
+.close:hover{
+    color:red;
+    background-color:white
+}
+
+.viewFull{
+    color:black;
+    font-weight:bold;
+    position: absolute;
+    right:4%;
+    opacity:0.8;
+    text-decoration: none !important
+}
+
+.viewFull:hover{
+    opacity:1;
+    color:black;
+}
+
+
+
+
+
+.displayProds{
+    margin: 7px 2px;
+    text-align:center;
+    width:24%;
+    padding:0px 10px 60px 10px;
+    border-radius:20px;
+    cursor:pointer
+}
+.displayProds:hover{
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30),
+    0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.displayProds img{
+    width:80%;
+    height:70%;
+    position: relative;
+    top:14%
+    
+}
+#productContainer{
+    position: relative;
+}
+input::first-letter{
+    text-transform: capitalize
+}
+
+.aform{
+    position: relative;
+}
+.aform:hover .viewItem{
+    opacity: 1;
+}
+
+.viewItem{
+    height:50px;
+    border-radius:4px;
+    background:none;
+    border:none;
+    background-color:rgb(255, 229, 81);
+    opacity:0;
+    width:100%;
+    transform: translateY(-60%);
+    position: relative;
+    transition: 1s
+    
+}
+.viewItem:hover{
+    background-color:rgb(255, 217, 0);
+    transition:0
+}
+
+.ogprice{
+    color:gray;
+    font-size:70%;
+    font-style:italic
+}
+
+.imgWrapper{
+    background-color:rgba(14, 10, 10, 0.15);
+    border-radius:10px;
+    position: relative;
+    height:40vh
+}
+
+.sizeText{
+    color:gray;
+    font-size:80%
+}
+
+ .imgWrapper:hover .viewItem{
+    opacity:1;
+} 
+
+.flexProds{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.breaker{
+
+        flex-basis: 100%;
+        width: 0px;
+        height: 0px;
+        overflow: hidden;
+    
+}
+
+#clicked{
+    display:block
+    
+}
+
+.orderSummaryItems{
+    border:solid gray 2px; 
+    padding: 70px
+}
+
+#confirmer img{
+    width: 20%;
+    height:20%
+}
+
+body{}
+
+.fullview{
+    opacity:0;
+    z-index:-99;
+    position: fixed;
+    transition:.5s;
+    top:0%;
+    left:26%;
+    width:50%;
+    text-align: center;
+    background-color:rgba(255, 255, 255, 1);
+    padding:30px 70px;
+    border-radius:20px
+}
+
+#setNew{
+    display:none;
+}
+
+.fullview b{
+    border-bottom:2px solid black
+}
+
+.btn-primary{
+    transform: translateY(75%);
+    
+    
+}
+.btn-secondary{
+    cursor:pointer;
+    padding:10px 25px;
+}
+
+.btn-secondary:hover{
+    transform:scaley(1.06)
+}
+
+.fullview img{
+    width:65%;
+    margin-top:3%;
+    height:50vh;
+   
+}
+
+
+#emailtaken, #invalidinfo, #taken{
+    color:#dc3445;
+    font-size:95%;
+    
+}
+
+.alert, .alert-success{
+    text-align:center
+}
+
+#invalidinfo{
+    text-align:center
+}
+
+h1, .centerthings{
+    text-align:center
+}
+
+.centerthings-flex{
+    display:flex;
+    justify-content: center
+}
+
+.centerthings-flex-column{
+    display:flex;
+    align-items: center;
+    flex-direction:column
+}
+
+.centerthings-flex-column h2{
+    text-align: center
+}
+
+#modifyimg{
+    width:32%;
+    height:32%;
+}
+.toggleChange{
+    color:blue;
+    text-decoration:underline;
+    cursor: pointer;
+    opacity:0.85
+}
+
+.toggleChange:hover{
+    opacity:1
+}
+
+#cancelChange{
+    width:0%
+}
+
+.wrapthings{
+    width:100%;
+    border-bottom:3px solid black
+}
+
+.optionButtons{
+    display:flex;
+    justify-content: center;
+    
+}
+.optionButtons button{
+    margin: 0px 5px
+}
+.delete{
+    position: absolute;
+    top:20%;
+    left:38%;
+    border:5px dotted black;
+    background-color:white;
+    padding:50px;
+    z-index:500000px;
+}
+
+.delete h4{
+    text-align: center
+}
+
+.bg-item{
+    opacity:0.6;
+    pointer-events: none
+}
+
+.cancel,.confirm{
+    padding:8px 30px;
+    border-radius:10px;
+    margin:5px;
+    background-color:blue;
+    color:white
+}
+
+.cancel:hover{
+    background-color:darkblue;
+}
+.confirm:hover{
+    background-color: darkblue;
+}
+
+
+.quanityBox{
+    height:25px;
+    width:10%
+}
+
+.nav-item a{
+    color:gray
+}
+
+.nav-item a:hover{
+    color:white
+}
+
+.fa, .fas{
+    margin-right:10px
+}
+.navbar-brand{
+    opacity:0.8
+}
+
+.navbar-brand:hover{
+    opacity:1
+}
