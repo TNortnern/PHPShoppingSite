@@ -28,6 +28,9 @@
         <a class="nav-link" href="#">Women</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="index.php?cart">View Cart</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="index.php?summary">Order History</a>
       </li>
     </ul>

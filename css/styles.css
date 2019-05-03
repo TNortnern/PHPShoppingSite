@@ -10,6 +10,42 @@ footer{
     
 }
 
+.cart form{
+    width:100px;
+    margin-top:5%
+}
+
+
+
+.trashicon{
+    font-size:150%; 
+    color:gray;
+    opacity:0.8; 
+    padding:0;
+    cursor:pointer
+}
+
+.trashicon:hover{
+    opacity:1
+}
+
+
+.addedToCart{
+    animation: .8s ease-out 0s 1 slideInFromTop;
+}
+
+@keyframes slideInFromTop {
+    0% {
+        opacity:0;
+        transform: translateY(-200%);
+    }
+
+    100% {
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
 
 
 .springSale{
@@ -130,6 +166,11 @@ input::first-letter{
 }
 .aform:hover .viewItem{
     opacity: 1;
+}
+
+.unbutton{
+    background:none;
+    border:none;
 }
 
 .viewItem{

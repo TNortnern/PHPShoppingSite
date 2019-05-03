@@ -1,6 +1,9 @@
 <?php
 $products = displayProducts();
 
+
+
+
 ?>
 
 <div class="jumbotron jumbotron-fluid productContainer">
@@ -66,7 +69,7 @@ foreach ($products as $key => $product) {
         echo "<p id='clickedPrice'>$$product[price]</p>";
     }
     echo "
-<form method='POST' action='index.php?oc'>
+<form method='POST' >
 ";
     if ($product['qty'] > 0) {
         echo 
@@ -115,7 +118,15 @@ foreach ($products as $key => $product) {
 
         echo "<h3 style='color:red'>Out of Stock</h3><button class='btn btn-primary' type='submit' method='POST' disabled>";
     } else {
-        echo "<button class='btn btn-primary' type='submit' method=POST>";
+        if(($_SESSION['R'] == "Y")){
+            echo "<input type='text' name='price' value='$discount' hidden>";
+        }
+        else{
+            echo "<input type='text' name='price' value='$product[price]' hidden>";
+        }
+        echo "
+        <button class='btn btn-primary' type='submit' value='addtocart' name='buyMethod'>Add to Cart</button>
+        <button class='btn btn-primary' type='submit' value='oneclick' name='buyMethod'>";
     }
     echo "Order $product[productName]
 </button>
@@ -126,5 +137,8 @@ foreach ($products as $key => $product) {
 
 }
 
+if(isset($_POST['addtocart'])){
+    echo "<h1>It's set!!</h1>";
+}
 ?>
 

@@ -14,11 +14,6 @@
 <h1>Confirm Order</h1>
 <div id="confirmer" class='centerthings'>
 <?php
-// <p class='orderSummaryItems'></p><br>
-// <p class='orderSummaryItems'>Price: $$product[price]</p><br>
-// <p class='orderSummaryItems'>Amount: $amount</p><br>
-// <p class='orderSummaryItems'>Size: $size</p>
-
 
 echo "
 <div class='centerthings-flex'>

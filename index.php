@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 if (isset($_GET['logout'])) {
     $_SESSION = array();
     session_destroy();
@@ -38,9 +39,21 @@ else if(isset($_GET['login'])){
     include "models/logindb.php";
     include "views/login/login.php";
 }
-else if(isset($_GET['oc'])){
+ 
+else if(isset($_POST['buyMethod'])){
+    if($_POST['buyMethod'] == 'oneclick'){
     include "models/orderdb.php";
     include "views/shopping/orderconfirm.php";
+}else{
+    include "views/shopping/addtocart.php";
+    include "views/shopping/productDisplay.php";
+}
+}
+else if(isset($_GET['cart'])){
+    include "views/shopping/cart.php";
+}
+else if(isset($_POST['cartProductID'])){
+    include "views/shopping/deletecartitem.php";
 }
 else if(isset($_GET['summary'])){
     include "models/orderdb.php";

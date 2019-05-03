@@ -17,6 +17,8 @@ function login(){
         $_SESSION['name'] = $name;
         $_SESSION['email'] = $email;
         $_SESSION['ID'] = $ID;
+        
+       
         if($admin == "No"){
             $_SESSION['R'] = "Y";
             $_SESSION['loggedin'] = "Y";
