@@ -43,7 +43,11 @@ foreach ($products as $key => $product) {
                 echo "<p>$$discount <span class='ogprice'>orig $$product[price]</span><br> <span style='color:red'>Out of Stock</span></p>";
             }
         } else {
+            if($product['qty'] == 0){
+                echo "<p>$product[price] <span style='color:red'>Out of Stock</span></p>";
+            }else{
             echo "<p>$$product[price]</p>";
+            }
         }
      
     echo "
@@ -137,8 +141,6 @@ foreach ($products as $key => $product) {
 
 }
 
-if(isset($_POST['addtocart'])){
-    echo "<h1>It's set!!</h1>";
-}
+
 ?>
 

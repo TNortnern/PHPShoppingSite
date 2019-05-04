@@ -7,6 +7,10 @@ if (isset($_GET['logout'])) {
     header("Location:index.php?login&lo");
 }
 
+if(isset($_GET['success'])){
+    echo "<div class='alert alert-success'>Thank you! Your order was placed succesfully.</div>";
+}
+
 if(isset($_GET['nli'])){
     header("Location:index.php?login&li");
 }
@@ -50,6 +54,7 @@ else if(isset($_POST['buyMethod'])){
 }
 }
 else if(isset($_GET['cart'])){
+    include "models/orderdb.php";
     include "views/shopping/cart.php";
 }
 else if(isset($_POST['cartProductID'])){
