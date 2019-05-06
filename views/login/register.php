@@ -1,4 +1,7 @@
 <?php
+if(isset($_SESSION['loggedin'])){
+    header("Location:index.php");
+}
   if(isset($_POST['prompt'])){
     echo "<div class='alert alert-danger emailtaken' role='alert'>That e-mail has been registered already.</div>";
 

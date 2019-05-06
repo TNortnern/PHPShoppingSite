@@ -8,6 +8,11 @@ foreach ($_SESSION['shopcart'] as $index => $prod) {
     $productStock = $product['qty'];
     $productid = implode(", ", $prod);
     $index++;
+    if($_SESSION['R'] == 'Y'){
+    echo "<div class='alert alert-success'>40% off coupon applied</div>";
+    $prod['product_price'] *= .60;
+    }
+     $prod['product_price'] = number_format((float) $prod['product_price'], 2, '.', '');
     $productTotal = $prod['product_amount'] * $prod['product_price'];
     $productTotal = number_format((float) $productTotal, 2, '.', '');
     $total += $productTotal;

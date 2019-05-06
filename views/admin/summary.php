@@ -79,7 +79,7 @@ foreach($orders as $index => $order){
 
 <div class='card'>
   <div class='card-header'>
-    Price of Item
+    Price
   </div>
   <div class='card-body'>
     <br>

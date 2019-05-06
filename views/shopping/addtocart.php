@@ -53,9 +53,11 @@ if(isset($_POST['buyMethod'])){
     }
 }
 
-// message if successfully added to cart
+// set temporary session variable to display added to cart message
 if($added == true){
-    echo "<div class='alert alert-success addedToCart'>Added to Cart!</div>";
+    $_SESSION['added'] = "set";
+    header("Location:index.php");
+    
 }
 
 

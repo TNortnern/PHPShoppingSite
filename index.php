@@ -1,11 +1,19 @@
 <?php
 session_start();
-
+include "models/database.php";
+include "models/product.php";
 if (isset($_GET['logout'])) {
     $_SESSION = array();
     session_destroy();
     header("Location:index.php?login&lo");
 }
+if(isset($_SESSION['added'])){
+    
+    echo "<div class='alert alert-success addedToCart'>Added to Cart!</div>";
+    unset($_SESSION['added']);
+
+}
+
 
 if(isset($_GET['success'])){
     echo "<div class='alert alert-success'>Thank you! Your order was placed succesfully.</div>";
@@ -32,9 +40,6 @@ else{
 }
 
 
-
-include "models/database.php";
-include "models/product.php";
  if(isset($_GET['register'])){
     include "models/reigsterdb.php";
     include "views/login/register.php";
@@ -44,7 +49,7 @@ else if(isset($_GET['login'])){
     include "views/login/login.php";
 }
  
-else if(isset($_POST['buyMethod'])){
+ else if(isset($_POST['buyMethod'])){
     if($_POST['buyMethod'] == 'oneclick'){
     include "models/orderdb.php";
     include "views/shopping/orderconfirm.php";
@@ -97,6 +102,7 @@ if (isset($_POST['order'])) {
 
 
 include "views/global/footer.php";
+
 
 ?>
 

@@ -62,6 +62,7 @@ foreach ($products as $key => $product) {
     echo "
 
 <div class='fullview'>
+<a class='viewFull' href='index.php?product=$product[productName]'>View Full Item<i class='fas fa-long-arrow-alt-right'></i></a>
 <a class='close'>X</a>
 <b>$product[productName]</b><br>
 <img src='images/$product[imageName]' alt='description'>";
@@ -122,12 +123,10 @@ foreach ($products as $key => $product) {
 
         echo "<h3 style='color:red'>Out of Stock</h3><button class='btn btn-primary' type='submit' method='POST' disabled>";
     } else {
-        if(($_SESSION['R'] == "Y")){
-            echo "<input type='text' name='price' value='$discount' hidden>";
-        }
-        else{
+        
+        
             echo "<input type='text' name='price' value='$product[price]' hidden>";
-        }
+        
         echo "
         <button class='btn btn-primary' type='submit' value='addtocart' name='buyMethod'>Add to Cart</button>
         <button class='btn btn-primary' type='submit' value='oneclick' name='buyMethod'>";
@@ -135,7 +134,7 @@ foreach ($products as $key => $product) {
     echo "Order $product[productName]
 </button>
 </form>
-<a class='viewFull' href='index.php?product=$product[productName]'>View Full Item<i class='fas fa-long-arrow-alt-right'></i></a>
+
 </div>
 ";
 

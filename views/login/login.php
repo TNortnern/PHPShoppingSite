@@ -1,4 +1,7 @@
 <?php
+if(isset($_SESSION['loggedin'])){
+    header("Location:index.php");
+}
 
 if(isset($_GET['lo'])){
       echo "<div class='centerthings'><h5 class='alert alert-success'>Successfully logged out. hope you enjoyed your stay.</h5></div>";

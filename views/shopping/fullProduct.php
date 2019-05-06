@@ -8,6 +8,9 @@ $product = getProductByName($prodName);
 
 <div class="clickedItem">
 <?php 
+    if($_SESSION['R'] == 'Y'){
+    $product['price'] *= .60;
+    }
 $product['price'] = number_format((float) $product['price'], 2, '.', '');
 echo "
 <hr>
@@ -19,13 +22,8 @@ echo "
 <p>$product[description]</p>
 <hr>
 ";
-if($_SESSION['R'] == 'Y'){
-    $discount = $product['price'] * .60;
-    $discount = number_format((float) $discount, 2, '.', '');
-    echo "<p id='clickedPrice'>$$discount</p>";
-}else{
     echo "<p id='clickedPrice'>$$product[price]</p>";
-}
+
 if($product['qty'] != 0){
 echo "<form id='fullProdForm' method='POST' action='index.php?oc'>
 <label for='size'>
@@ -76,7 +74,12 @@ echo "<form id='fullProdForm' method='POST' action='index.php?oc'>
 
         echo "<h3 style='color:red'>Out of Stock</h3><button class='btn btn-primary' type='submit' method='POST' disabled>";
     } else {
-        echo "<button class='btn btn-success' type='submit' method=POST>";
+        echo "
+        <input name='price' value='$product[price]' hidden>
+        <button class='btn btn-success' type='submit' value='addtocart' name='buyMethod'>Add to Cart</button>
+        <button class='btn btn-success' type='submit' name='buyMethod' value='oneclick' method=POST>
+        ";
+        
     }
     echo "Order $product[productName]
 </button>

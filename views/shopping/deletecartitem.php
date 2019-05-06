@@ -10,5 +10,9 @@ if (isset($_POST['cartProductID'])) {
 
     }
     $_SESSION['shopcart'] = array_values($_SESSION['shopcart']);
+    if(isset($_GET['cartItem'])){
+        header("Location:index.php");
+    }else{
     header("Location:?cart&rm");
+    }
 }

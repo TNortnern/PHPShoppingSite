@@ -12,6 +12,36 @@ var prodimg = document.querySelector("#prodimg");
 var cancelChange = document.querySelector("#cancelChange");
 var seendiv = false;
 
+
+$("#cartToggler").click(function(e){
+    $("#navCart").slideToggle(function(){
+        $("#navCart").addClass("vis");
+    });
+    $("#navCart").css('z-index',1000);
+    e.preventDefault();
+    $("#navCart").removeClass("vis");
+});
+
+$("#cartClose").click(function(){
+   $("#navCart").slideUp(function(){
+       $("#navCart").css('z-index',-1000);
+       $("#navCart").removeClass("vis");
+   }); 
+    
+    
+});
+
+$(document).scroll(function(){
+    $("#navCart").slideUp(function(){
+       $("#navCart").css('z-index',-1000);
+        
+   }); 
+})
+    
+
+
+
+// *** Prompt to change image on modifying product *** //
 $(changeImg).click(function(){
   $(setNew).show();
   $(prodimg).attr('disabled', false);
@@ -94,10 +124,28 @@ $(document).click(function () {
         }
     });
 })
+ 
+// navigation cart closes if you click outside
+$('body').click(function( event ) {
+$("#navCart").click(function(event) {
+    event.stopPropagation();
+});
+if ($("#navCart").is(".vis")) {
+     var target = $( event.target );
+  if (!target.is( "#navCart" )) {
+   $("#navCart").slideUp();
+  }
+ }
+  
+});
+
+
+
 
 
 
 $('body').mouseup(function (e) {
+    
     
     $.each($('.fullview'), function (index, container) {
         // checks to see if any of the fullview items are selected
