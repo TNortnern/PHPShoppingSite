@@ -5,12 +5,12 @@ function registerUser(){
     $username = $_POST['username'];
     $useremail = $_POST['useremail'];
     $userpass = $_POST['userpass'];
-
+    $userpass = md5($userpass);
     $checksql = "SELECT * FROM users WHERE useremail = '$useremail'";
     $checkqry = $db->query($checksql);
     $email = $checkqry->fetch();
     if(!empty($email)){
-        // header("Location:index.php?register&at&e=$_POST[useremail]&n=$_POST[username]");
+//         header("Location:index.php?register&at&e=$_POST[useremail]&n=$_POST[username]");
 
       
     

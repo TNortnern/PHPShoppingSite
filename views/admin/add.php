@@ -38,7 +38,7 @@ if(isset($_POST['prompt'])){
     </div>
     <div class="form-group">
       <label for="proddesc">Description</label>
-      <input type="text" class="form-control" id="proddesc" pattern="^(?!^ +$)([\w -&]+)$" placeholder="Enter Product Description" name="proddesc" 
+      <input type="text" class="form-control" id="proddesc" pattern="^(?!^ +$)([\w -&]+)$"  placeholder="Enter Product Description" name="proddesc" 
       <?php if(isset($_POST['proddesc'])){
         echo "value='$_POST[proddesc]'";
       }

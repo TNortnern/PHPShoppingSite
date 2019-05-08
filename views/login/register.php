@@ -1,4 +1,12 @@
-<?php
+ <?php
+    if($_POST){
+        if(isset($_POST['adduser'])){
+            registerUser();
+            
+            
+        }
+    }
+
 if(isset($_SESSION['loggedin'])){
     header("Location:index.php");
 }
@@ -32,9 +40,7 @@ if(isset($_SESSION['loggedin'])){
         ?>
       required>
       <div class="invalid-feedback">Enter a valid email.</div>
-      <?php 
-      
-      ?>
+
     </div>
     <div class="form-group">
       <label for="userpass">Password</label>
@@ -58,11 +64,4 @@ if(isset($_SESSION['loggedin'])){
     </div>
   </form>
 
-  <?php
-    if($_POST){
-        if(isset($_POST['adduser'])){
-            registerUser();
-            
-            
-        }
-    }
+ 

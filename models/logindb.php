@@ -4,7 +4,7 @@ function login(){
     global $db;
     $useremail = $_POST['useremail'];
     $userpass = $_POST['userpass'];
-
+    $userpass = md5($userpass);
     $checksql = "SELECT * FROM users WHERE useremail = '$useremail' AND userpass = '$userpass'";
     $checkqry = $db->query($checksql);
     $exists = $checkqry->fetch();

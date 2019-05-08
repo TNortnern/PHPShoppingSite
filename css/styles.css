@@ -12,12 +12,14 @@ footer{
     width:30%;
     padding:7px 30px;
     border-radius: 6px;
-    height:70%;
+    height:78%;
+    top:9%;
     background-color:#343a40;
     color:white;
     text-align: center;
     overflow: hidden
 }
+
 .navCartItems{
     display:flex; justify-content:center; border:2px solid gray; padding:10px 14px
 }
@@ -57,7 +59,7 @@ footer{
 }
 #navCart p{
     margin-left:5%;
-    font-size:.9em;
+    font-size:.8em;
 }
 
 .navbar{position: sticky; top:0; z-index:1000 }
@@ -313,7 +315,9 @@ input::first-letter{
     width:16.6%
 }
 
-body{}
+body{
+    position: relative;
+}
 
 .fullview{
     opacity:0;
@@ -337,10 +341,12 @@ body{}
     border-bottom:2px solid black
 }
 
+.adminfullview .btn-primary{
+    transform: translateY(48%);
+}
+
 .btn-primary{
     transform: translateY(75%);
-    
-    
 }
 .btn-secondary{
     cursor:pointer;
@@ -485,4 +491,29 @@ h1, .centerthings{
 
 .navbar-brand:hover{
     opacity:1
+}
+
+
+
+
+@media only screen and (min-width: 1920px) {
+    #navCart{
+        top:5.1%;
+        height:65%
+    }
+}
+
+
+@media only screen and (min-width: 2144px) {
+    #navCart{
+        top:4.1%
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    #navCart{
+        top:4.1%;
+    }
+    
 }

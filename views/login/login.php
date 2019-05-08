@@ -4,7 +4,7 @@ if(isset($_SESSION['loggedin'])){
 }
 
 if(isset($_GET['lo'])){
-      echo "<div class='centerthings'><h5 class='alert alert-success'>Successfully logged out. hope you enjoyed your stay.</h5></div>";
+      echo "<div class='centerthings alert alert-success'>Successfully logged out. hope you enjoyed your stay.</div>";
     }
 
 ?>
@@ -53,3 +53,7 @@ if(isset($_GET['lo'])){
            login();
        }
    }
+   ?>
+
+
+   

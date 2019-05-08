@@ -55,13 +55,13 @@ foreach ($products as $key => $product) {
 <img src='images/$product[imageName]' alt='description'>
 <p id='clickedPrice'>$$product[price]</p>
 <div class='optionButtons'>
-<form method='POST' action='admin.php?option=modify'>
+<form class='adminfullview' method='POST' action='admin.php?option=modify'>
 <input type='text' name='productID' value='$product[productID]' hidden>
 <button class='btn btn-primary' type='submit'>
 Modify $product[productName]
 </button>
 </form>
-<form method='POST' action='admin.php?option=delete'>
+<form class='adminfullview' method='POST' action='admin.php?option=delete'>
 <input type='text' name='productID' value='$product[productID]' hidden>
 <button class='btn btn-primary promp-delete' type='submit'>
 Delete $product[productName]
